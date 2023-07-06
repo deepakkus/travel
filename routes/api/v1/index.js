@@ -10,9 +10,9 @@ const TripController = require('../../../Controller/Admin/Trip');
 router.post('/admin/login', AdminController.login);
 router.post('/admin/register', AdminController.register);
 router.post('/admin/trip', TripController.create);
-/*router.put('/admin/patient/:id', PatientController.update);
-router.delete('/admin/patient/:id', PatientController.Delete);
-router.get('/admin/patient-details/:id', PatientController.viewSingel);*/
+router.put('/admin/trip/:id', TripController.update);
+router.delete('/admin/trip/:id', TripController.Delete);
+router.get('/admin/trip-details/:id', TripController.viewSingel);
 router.get('/admin/trip', TripController.viewAll);
 const multer = require('multer');
 const middleware  = require('../../../service/middleware').middleware;
