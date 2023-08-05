@@ -13,7 +13,8 @@ function createToken(data) {
 const create = async (req, res) => {
     const v = new Validator(req.body, {
         name: "required",
-        country: "required"
+        country: "required",
+        region: "required",
     });
     let matched = await v.check().then((val) => val);
     if (!matched) {
@@ -26,6 +27,7 @@ const create = async (req, res) => {
         _id: mongoose.Types.ObjectId(),
         name: req.body.name,
         country: req.body.country,
+        region: req.body.region,
         image: req.body.image,
 		    createdOn: new Date()
     };
