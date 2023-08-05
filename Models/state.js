@@ -12,8 +12,7 @@ const StateSchema = new mongoose.Schema({
     },
     region: {
         type: String,
-        required: true,
-        default:"Pacific"
+        required: true
     },
     image: {
         type: String,
